@@ -22,7 +22,7 @@ Most dataset configurations will take one of four forms (below you will see exam
 <p> Case 3: The example is a sentence with an integer label. This data format is easily converted by loss functions into three sentences (triplets) where the first is an "anchor", the second a "positive" of the same class as the anchor, and the third a "negative" of a different class. Each sentence has an integer label indicating the class to which it belongs. </p>
 <p> Case 4: The example is a triplet (anchor, positive, negative) without classes or labels for the sentences. </p>
 
-## Here My problem statement belongs to case 2 where i dont have labels.
+## My problem statement belongs to case 2 where i dont have labels.
 
 The next step is converting the dataset into a format the Sentence Transformers model can understand. 
 
