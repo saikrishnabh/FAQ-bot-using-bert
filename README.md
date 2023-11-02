@@ -1,4 +1,4 @@
-# FAQ-bot-using-bert sentence transformers
+# FAQ-Bot-using-bert Sentence Transformers Model.
 
 I had csv file of Frequently asked Questions and answers. <b> My problem statement is choose/find similar question based on user input question. </b> sentence-transformers is a library that provides easy methods to compute embeddings (dense vector representations) for sentences, paragraphs and images. Texts are embedded in a vector space such that similar text is close, which enables applications such as semantic search, clustering, and retrieval.
 
@@ -24,7 +24,7 @@ Most dataset configurations will take one of four forms (below you will see exam
 
 ## My problem statement belongs to case 2 where i dont have labels.
 
-The next step is converting the dataset into a format the Sentence Transformers model can understand. 
+The next step is to convert the dataset into a format, where Sentence Transformers models can understand. 
 
 ## Loss functions for training a Sentence Transformers model?
 
