@@ -1,1 +1,1 @@
-# FAQ-bot-using-bert
+# FAQ-bot-using-bert sentence transformers
