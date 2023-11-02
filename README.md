@@ -2,7 +2,7 @@
 
 I had csv file of Frequently asked Questions and answers. My problem statement is choose/find similar question based on user input question. sentence-transformers is a library that provides easy methods to compute embeddings (dense vector representations) for sentences, paragraphs and images. Texts are embedded in a vector space such that similar text is close, which enables applications such as semantic search, clustering, and retrieval.
 
-Working:-
+## Working:-
 
 ![Relative Image](./How_Sentence_Transformers_models_work.png)
 
@@ -11,7 +11,7 @@ Why we use Sentence Transformers instead of BERT or Roberta Transformers?
 i) Pre-trained Transformers require heavy computation to perform semantic search tasks. For example, finding the most similar pair in a collection of 10,000 sentences requires about 50 million inference computations (~65 hours) with BERT. In contrast, a BERT Sentence Transformers model reduces the time to about 5 seconds.
 ii) Once trained, Transformers create poor sentence representations out of the box. A BERT model with its token embeddings averaged to create a sentence embedding performs worse than the GloVe embeddings developed in 2014.
 
-How to prepare your dataset for Fine-tunning a Sentence Transformers model?
+## How to prepare your dataset for Fine-tunning a Sentence Transformers model?
 
 To Finetune a Sentence Transformers model, you need to inform it somehow that two sentences have a certain degree of similarity. Therefore, each example in the data requires a label or structure that allows the model to understand whether two sentences are similar or different.
 
@@ -22,11 +22,11 @@ Case 2: The example is a pair of positive (similar) sentences without a label. F
 Case 3: The example is a sentence with an integer label. This data format is easily converted by loss functions into three sentences (triplets) where the first is an "anchor", the second a "positive" of the same class as the anchor, and the third a "negative" of a different class. Each sentence has an integer label indicating the class to which it belongs.
 Case 4: The example is a triplet (anchor, positive, negative) without classes or labels for the sentences.
 
-Here My problem statement belongs to case 2 where i dont have labels.
+## Here My problem statement belongs to case 2 where i dont have labels.
 
 The next step is converting the dataset into a format the Sentence Transformers model can understand. 
 
-Loss functions for training a Sentence Transformers model?
+## Loss functions for training a Sentence Transformers model?
 
 Each will have a different loss function associated with it.
 
@@ -38,5 +38,5 @@ Case 3: When your samples are triplets of the form [anchor, positive, negative] 
 
 Case 4: If you don't have a label for each sentence in the triplets, you should use TripletLoss. This loss minimizes the distance between the anchor and the positive sentences while maximizing the distance between the anchor and the negative sentences.
 
-What are the limits of Sentence Transformers?
+## What are the limits of Sentence Transformers?
 Sentence Transformers models work much better than the simple Transformers models for semantic search. However, where do the Sentence Transformers models does not work well If your task is classification, then using sentence embeddings is the wrong approach. In that case, the 🤗 Transformers library would be a better choice.
